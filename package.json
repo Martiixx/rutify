@@ -1,0 +1,18 @@
+{
+  "name": "rutify",
+  "version": "1.0.0",
+  "description": "This package will take a Chilean rut input and will format it and validate it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "rut",
+    "rutificador"
+  ],
+  "author": "Martin Carrasco",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/Martiixx/rutify.git"
+}
