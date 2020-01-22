@@ -2,7 +2,7 @@
 Libreria npm, puedes darle formato y validar rut Chileno.
 
 ```bash
-npm install --save rutify
+npm install --save rutify-cl
 ```
 
 ```js
