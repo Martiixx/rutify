@@ -1,18 +1,114 @@
 {
-  "name": "rutify",
-  "version": "1.0.0",
-  "description": "This package will take a Chilean rut input and will format it and validate it",
+  "name": "rutify-cl",
+  "version": "1.1.0",
+  "description": "A modern Node.js library for formatting and validating Chilean RUT (Rol Único Tributario) numbers with comprehensive error handling and multiple output formats",
   "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint index.js",
+    "lint:fix": "eslint index.js --fix",
+    "format": "prettier --write index.js",
+    "format:check": "prettier --check index.js",
+    "build": "echo 'No build step required for this package'",
+    "dev": "npm run test:watch",
+    "prepublishOnly": "npm run test && npm run lint && npm run format:check",
+    "version": "npm run format && git add -A",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
-    "node",
-    "npm",
+    "chile",
+    "chilean",
     "rut",
-    "rutificador"
+    "rutificador",
+    "validation",
+    "formatter",
+    "dni",
+    "identification",
+    "chilean-rut",
+    "rut-validator",
+    "rut-formatter",
+    "chilean-id",
+    "tax-id",
+    "national-id",
+    "node",
+    "javascript",
+    "es6",
+    "utility",
+    "library"
   ],
-  "author": "Martin Carrasco",
+  "author": {
+    "name": "Martin Carrasco",
+    "email": "martiixx.carrasco@gmail.com",
+    "url": "https://github.com/Martiixx"
+  },
   "license": "GPL-3.0",
-  "homepage": "https://github.com/Martiixx/rutify.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Martiixx/rutify.git",
+    "directory": "."
+  },
+  "bugs": {
+    "url": "https://github.com/Martiixx/rutify/issues"
+  },
+  "homepage": "https://github.com/Martiixx/rutify#readme",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "index.js",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^2.0.0"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Martiixx"
+  },
+  "sideEffects": false,
+  "unpkg": "index.js",
+  "jsdelivr": "index.js"
 }
