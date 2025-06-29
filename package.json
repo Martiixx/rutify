@@ -61,7 +61,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Martiixx/rutify.git",
+    "url": "git+https://github.com/Martiixx/rutify.git",
     "directory": "."
   },
   "bugs": {
